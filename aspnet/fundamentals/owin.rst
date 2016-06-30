@@ -57,6 +57,8 @@ You can of course configure other actions to take place within the OWIN pipeline
 
 .. note:: The OWIN support in ASP.NET Core is an evolution of the work that was done for the `Katana project <http://katanaproject.codeplex.com/>`_. Katana's ``IAppBuilder`` component has been replaced by ``IApplicationBuilder``, but if you have existing Katana-based middleware, you can use it within your ASP.NET Core application through the use of a bridge, as shown in the `Owin.IAppBuilderBridge example on GitHub <https://github.com/aspnet/Entropy/tree/master/samples/Owin.IAppBuilderBridge>`_. 
 
+.. _hosting-on-owin:
+
 Using ASP.NET Hosting on an OWIN-based server
 ---------------------------------------------
 
