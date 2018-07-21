@@ -16,14 +16,14 @@ By [Rachel Appel](https://twitter.com/rachelappel)
 
 ASP.NET Core SignalR is a library that simplifies adding real-time web functionality to apps. Real-time web functionality enables server-side code to push content to clients instantly.
 
-Good candidates for SignalR:
+Good candidates for SignalR are:
 
 * Apps that require high frequency updates from the server. Examples are gaming, social networks, voting, auction, maps, and GPS apps.
 * Dashboards and monitoring apps. Examples include company dashboards, instant sales updates, or travel alerts.
 * Collaborative apps. Whiteboard apps and team meeting software are examples of collaborative apps.
 * Apps that require notifications. Social networks, email, chat, games, travel alerts, and many other apps use notifications.
 
-SignalR provides an API for creating server-to-client [remote procedure calls (RPC)](https://wikipedia.org/wiki/Remote_procedure_call). The RPCs call JavaScript functions on clients from server-side .NET Core code.
+SignalR provides an API for creating bidirectional [remote procedure calls (RPC)](https://wikipedia.org/wiki/Remote_procedure_call). Clients can call functions defined on the server, and the server can call functions defined on the clients.
 
 SignalR for ASP.NET Core:
 
@@ -31,13 +31,13 @@ SignalR for ASP.NET Core:
 * Enables broadcasting messages to all connected clients simultaneously. For example, a chat room.
 * Enables sending messages to specific clients or groups of clients.
 * Is open-sourced at [GitHub](https://github.com/aspnet/signalr).
-* Scalable.
+* Can be scaled to thousands or millions of clients.
 
 The connection between the client and server is persistent, unlike an HTTP connection.
 
 ## Transports
 
-SignalR abstracts over a number of techniques for building real-time web applications. [WebSockets](https://tools.ietf.org/html/rfc7118) is the optimal transport, but other techniques like Server-Sent Events and Long Polling can be used when those aren't available. SignalR will automatically detect and initialize the appropriate transport based on features supported on the server and client.
+SignalR abstracts over a number of techniques for real-time communication. [WebSockets](https://tools.ietf.org/html/rfc7118) is the optimal transport, but other techniques like [Server-Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events) and Long Polling can be used when WebSockets aren't available. SignalR will automatically detect and initialize the appropriate transport based on features supported on the server and client.
 
 ## Hubs
 
